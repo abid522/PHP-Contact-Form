@@ -18,14 +18,13 @@
                 $msgClass = 'alert-danger';
             }else{
             $mail = new PHPMailer(true);
-
             try {
                     // SMTP Configuration
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
                     $mail->SMTPAuth = true;
                     $mail->Username = 'abidul.haque@samarth.ac.in'; // Your Gmail address
-                    $mail->Password = 'bmus xehr ueit gcrh'; // Your Gmail app password (not your main password)
+                    $mail->Password = 'xxxx xxxx xxxx'; // Your Gmail app password (not your main password)
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use STARTTLS
                     $mail->Port = 587;
 
@@ -48,7 +47,7 @@
                     $msg = 'Your email has been sent';
                     $msgClass = 'alert-success';
                 } catch (Exception $e) {
-                    $msg = 'Your email could not be sent. Error: ' . $mail->ErrorInfo;
+                    $msg = 'Your email could not be sent. ' . $mail->ErrorInfo;
                     $msgClass = 'alert-danger';
                 }
             }
